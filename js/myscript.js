@@ -63,7 +63,6 @@ biciclette.forEach(bicicletta =>{
     },
  ];
 
- 
  const nuovoArraySquadre =[];
 
  squadre.forEach(squadra => {
@@ -72,9 +71,31 @@ biciclette.forEach(bicicletta =>{
     squadra.falli_subiti = Math.floor(Math.random() * 10 + 1);
     
     const {nome, falli_subiti} = squadra;
-    console.log(nome,falli_subiti);
     nuovoArraySquadre.push({nome,falli_subiti});
+
 
  });
  
  console.log(nuovoArraySquadre);
+
+
+/********************************
+ Snack 3
+ *******************************/
+
+const oldArray=['milano','palermo','roma','lecce','brindisi'];
+
+const newArray=[];
+
+selector(oldArray,2,3);
+
+function selector(array,valMin,valMax){
+
+    array.forEach((elemento,index)=>{
+        if(index >= valMin && index<=valMax){
+            newArray.push(elemento);
+        }
+    });
+}
+
+console.log(newArray);
