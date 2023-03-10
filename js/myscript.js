@@ -31,7 +31,6 @@ biciclette.forEach(bicicletta =>{
         console.log(`La bicicletta con il peso minore è la ${bicicletta.nome} con un peso di ${bicicletta.peso}`);
     }
 });
-
 /********************************
  Snack 2
  *******************************/
@@ -69,13 +68,13 @@ biciclette.forEach(bicicletta =>{
 
  squadre.forEach(squadra => {
 
-    const numeroCasuale1 = Math.floor(Math.random() * 30 + 1);
-    const numeroCasuale2 = Math.floor(Math.random() * 10 + 1);
+    squadra.punti_fatti = Math.floor(Math.random() * 30 + 1);
+    squadra.falli_subiti = Math.floor(Math.random() * 10 + 1);
+    
+    const {nome, falli_subiti} = squadra;
+    console.log(nome,falli_subiti);
+    nuovoArraySquadre.push({nome,falli_subiti});
 
-    squadra.punti_fatti += numeroCasuale1;
-    squadra.falli_subiti += numeroCasuale2;
-
-    nuovoArraySquadre.push(`${squadra.nome} ${squadra.punti_fatti} ${squadra.falli_subiti}`)
  });
  
  console.log(nuovoArraySquadre);
